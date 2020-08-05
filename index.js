@@ -3,13 +3,15 @@ const app = express();
 
 // home
 app.get('/', (request, response)=>{
-    response.send('This is the Home Page!');
+    response.sendFile(__dirname+'/views/index.html');
 })
 // about
 app.get('/about', (request, response)=>{
-    response.send('Some stuff about me will go here');
+    response.sendFile(__dirname+'/views/about.html');
 })
 // blog
 app.get('/blog', (request, response)=>{
-    reesponse.send('A directory of all my blog posts will go here')
+    response.sendFile(__dirname+'/views/blog-directory.html')
 }) 
+
+app.listen(8000);
