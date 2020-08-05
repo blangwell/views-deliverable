@@ -1,9 +1,11 @@
-const express = require('express');
-const app = express();
+const express = require('express'); // import express
+const app = express(); // new express instance
 
 // home
 app.get('/', (request, response)=>{
-    response.sendFile(__dirname+'/views/index.html');
+    // use __dirname to get the absolute file path
+    // instead of send() we call sendFile()
+    response.sendFile(__dirname+'/views/index.html'); // need absolute path!
 })
 // about
 app.get('/about', (request, response)=>{
