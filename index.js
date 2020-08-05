@@ -12,4 +12,4 @@ app.get('/about', (request, response)=>{
 // blog
 app.get('/blog', (request, response)=>{
     reesponse.send('A directory of all my blog posts will go here')
-})
+}) 
